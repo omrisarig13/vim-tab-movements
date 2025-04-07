@@ -47,7 +47,7 @@ nnoremap <c-w>to :tabonly<cr>
 
 nnoremap <c-w>S :tab split<cr>
 
-command! TABNEW tabnew | tabmove-1
+command! TABNEW -tabnew
 tnoremap gt gt
 tnoremap 1gt 1gt
 tnoremap 2gt 2gt
