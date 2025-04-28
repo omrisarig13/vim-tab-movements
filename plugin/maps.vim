@@ -2,8 +2,7 @@ augroup TabMovement
     autocmd!
     autocmd TabLeave * let g:lasttab = tabpagenr()
 augroup END
-nnoremap <silent> ggt :exe "tabn ".g:lasttab<cr>
-nnoremap <silent> ggg gg
+nnoremap <silent> gl :exe "tabn ".g:lasttab<cr>
 nnoremap <silent> +gt :tabn<cr>
 nnoremap <silent> +1gt :tabn<cr>
 nnoremap <silent> +2gt :tabn+2<cr>
@@ -59,8 +58,7 @@ tnoremap 7gt 7gt
 tnoremap 8gt 8gt
 tnoremap 9gt 9gt
 tnoremap gT gT
-tnoremap ggt :exe "tabn ".g:lasttab<cr>
-tnoremap ggg gg
+tnoremap gl :exe "tabn ".g:lasttab<cr>
 tnoremap +gt :tabn<cr>
 tnoremap +1gt :tabn<cr>
 tnoremap +2gt :tabn+2<cr>
@@ -107,5 +105,6 @@ augroup END
 
 command! Termnew tabnew | execute "terminal" | only
 nnoremap <leader>te :Termnew<CR>
+nnoremap <leader>tn :tabnew<CR>
 
 command! Tablast :tablast
